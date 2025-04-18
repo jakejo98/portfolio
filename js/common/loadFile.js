@@ -1,6 +1,5 @@
 export function loadFile(callback) {
   let elementsLoaded = 0;
-
   let totalElementsToLoad = 0;
 
   function loadIfExists(selector, url) {
@@ -25,6 +24,12 @@ export function loadFile(callback) {
     }
   }
 
-  loadIfExists('#header', './../../html/header.html');
-  loadIfExists('#footer', './../../html/footer.html');
+  const basePath = getBasePath();
+
+  loadIfExists('#header', `${basePath}/html/header.html`);
+  loadIfExists('#footer', `${basePath}/html/footer.html`);
+}
+
+function getBasePath() {
+  return location.pathname.includes('/portfolio') ? '/portfolio' : '';
 }
