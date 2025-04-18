@@ -1,0 +1,17 @@
+@mixin inner($width) {
+  width: 100%;
+
+  @if $width == 'desktop' {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@mixin pos($v, $t, $r, $b, $l, $z) {
+  position: $v;
+  top : $t; 
+  right: $r;
+  bottom: $b; 
+  left: $l;
+  z-index: $z;
+}
