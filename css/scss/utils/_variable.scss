@@ -1,9 +1,16 @@
+$color-type : (
+  blue-01 : #005B96,
+  grey-01 : #666666, 
+);
+
 $color-bg: (
-  grey-01 : #DDDDDD,
+  grey-01 : #F5F5F5,
+  blue-01 : #005B96,
 );
 
 $color-border: (
   black-01 : #1A1A1A,
   blue-01 : #005B96,
-  blue-02 : rgba(0, 91, 150, 0.5),
+  blue-02 : rgba(0, 91, 150, 0.1),
+  grey-01 : #F5F5F5,
 );

@@ -3,14 +3,93 @@
     & .section_inner {
       @include inner('responsive');
     }
+    // main
     &.section_main {
       position: relative;
-      height: calc(100vh - 60px);
-      margin-top: 60px;
+      height: 100vh;
       & .main_visual_particle {
         @include pos(absolute, 0px, null, null, 0px, -1);
         width: 100%;
         height: 100%;
+      }
+      & .main_visual_wrap {
+        @include pos(absolute, 50%, null, null, 50%, null);
+        transform: translate(-50%, -50%);
+        & .main_visual {
+          width: 60vw;
+          height: 60vw;
+          border: 5px solid transparent;
+          border-color: map-get($color-border, blue-02) map-get($color-border, blue-01) map-get($color-border, blue-02) map-get($color-border, blue-01);
+          border-radius: 50%;
+          background-color: #FFFFFF;
+          transform: rotate(45deg);
+          animation: mainVisual 20s ease infinite;
+        }
+        & .main_visual_title_wrap {
+          @include pos(absolute, 50%, null, null, 50%, null);
+          width: 100%;
+          transform: translate(-50%, -50%);
+          & .main_visual_title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 54px;
+            color: map-get($color-type, blue-01);
+            text-align: center;
+            & .main_visual_title_blink {
+              display: inline-block;
+              width: 5px;
+              height: 36px;
+              background: map-get($color-bg, blue-01);
+              margin-left: 5px;
+              animation: blink 0.5s infinite;
+            }
+          }
+        }
+      }
+      & .scroll_wrap {
+        @include pos(absolute, null, null, 20px, 0px, null);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        & .scroll {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 62px;
+          & .scroll_arrow {
+            @include pos(absolute, null, null, null, 50%, null);
+            width: 24px;
+            height: 24px;
+            margin-left: -12px;
+            border-left: 1px solid map-get($color-border, blue-01);
+            border-bottom: 1px solid map-get($color-border, blue-01);
+            transform: rotate(-45deg);
+            opacity: 0;
+            animation: scroll 2s infinite;
+            &:nth-of-type(1) {
+              animation-delay: 0s;
+              top: 0px;
+            }
+            &:nth-of-type(2) {
+              animation-delay: 0.15s;
+              top: 12px;
+            }
+            &:nth-of-type(3) {
+              animation-delay: 0.3s;
+              top: 24px;
+            }
+          }
+        }
+        & .scroll_text {
+          font-size: 14px;
+          line-height: 20px;
+        }
       }
     }
   }
@@ -21,14 +100,93 @@
     & .section_inner {
       @include inner('responsive');
     }
+    // main
     &.section_main {
       position: relative;
-      height: calc(100vh - 80px);
-      margin-top: 80px;
+      height: 100vh;
       & .main_visual_particle {
         @include pos(absolute, 0px, null, null, 0px, -1);
         width: 100%;
         height: 100%;
+      }
+      & .main_visual_wrap {
+        @include pos(absolute, 50%, null, null, 50%, null);
+        transform: translate(-50%, -50%);
+        & .main_visual {
+          width: 60vw;
+          height: 60vw;
+          border: 5px solid transparent;
+          border-color: map-get($color-border, blue-02) map-get($color-border, blue-01) map-get($color-border, blue-02) map-get($color-border, blue-01);
+          border-radius: 50%;
+          background-color: #FFFFFF;
+          transform: rotate(45deg);
+          animation: mainVisual 20s ease infinite;
+        }
+        & .main_visual_title_wrap {
+          @include pos(absolute, 50%, null, null, 50%, null);
+          width: 100%;
+          transform: translate(-50%, -50%);
+          & .main_visual_title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 72px;
+            color: map-get($color-type, blue-01);
+            text-align: center;
+            & .main_visual_title_blink {
+              display: inline-block;
+              width: 5px;
+              height: 48px;
+              background: map-get($color-bg, blue-01);
+              margin-left: 5px;
+              animation: blink 0.5s infinite;
+            }
+          }
+        }
+      }
+      & .scroll_wrap {
+        @include pos(absolute, null, null, 20px, 0px, null);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        & .scroll {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 62px;
+          & .scroll_arrow {
+            @include pos(absolute, null, null, null, 50%, null);
+            width: 24px;
+            height: 24px;
+            margin-left: -12px;
+            border-left: 1px solid map-get($color-border, blue-01);
+            border-bottom: 1px solid map-get($color-border, blue-01);
+            transform: rotate(-45deg);
+            opacity: 0;
+            animation: scroll 2s infinite;
+            &:nth-of-type(1) {
+              animation-delay: 0s;
+              top: 0px;
+            }
+            &:nth-of-type(2) {
+              animation-delay: 0.15s;
+              top: 12px;
+            }
+            &:nth-of-type(3) {
+              animation-delay: 0.3s;
+              top: 24px;
+            }
+          }
+        }
+        & .scroll_text {
+          font-size: 14px;
+          line-height: 20px;
+        }
       }
     }
   }
@@ -39,31 +197,176 @@
     & .section_inner {
       @include inner('desktop');
     }
+    // main
     &.section_main {
       position: relative;
-      height: calc(100vh - 100px);
-      margin-top: 100px;
+      height: 100vh;
       & .main_visual_particle {
         @include pos(absolute, 0px, null, null, 0px, -1);
         width: 100%;
         height: 100%;
+        filter: blur(2px)
       }
-      & .main_visual {
+      & .main_visual_wrap {
         @include pos(absolute, 50%, null, null, 50%, null);
+        transform: translate(-50%, -50%);
+        & .main_visual {
+          width: 600px;
+          height: 600px;
+          border: 5px solid transparent;
+          border-color: map-get($color-border, blue-02) map-get($color-border, blue-01) map-get($color-border, blue-02) map-get($color-border, blue-01);
+          border-radius: 50%;
+          background-color: #FFFFFF;
+          transform: rotate(45deg);
+          animation: mainVisual 20s ease infinite;
+        }
+        & .main_visual_title_wrap {
+          @include pos(absolute, 50%, null, null, 50%, null);
+          width: 100%;
+          transform: translate(-50%, -50%);
+          & .main_visual_title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 90px;
+            color: map-get($color-type, blue-01);
+            text-align: center;
+            & .main_visual_title_blink {
+              display: inline-block;
+              width: 5px;
+              height: 60px;
+              background: map-get($color-bg, blue-01);
+              margin-left: 5px;
+              animation: blink 0.5s infinite;
+            }
+          }
+        }
+      }
+      & .scroll_wrap {
+        @include pos(absolute, null, null, 20px, 0px, null);
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 650px;
-        height: 650px;
-        background-color: green;
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-        & .main_visual_inner {
-          width: 650px;
-          height: 650px;
-          border-radius: 50%;
-          background-color: #FFFFFF;
-          border: 5px solid red;
+        flex-direction: column;
+        width: 100%;
+        & .scroll {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 62px;
+          & .scroll_arrow {
+            @include pos(absolute, null, null, null, 50%, null);
+            width: 24px;
+            height: 24px;
+            margin-left: -12px;
+            border-left: 1px solid map-get($color-border, blue-01);
+            border-bottom: 1px solid map-get($color-border, blue-01);
+            transform: rotate(-45deg);
+            opacity: 0;
+            animation: scroll 2s infinite;
+            &:nth-of-type(1) {
+              animation-delay: 0s;
+              top: 0px;
+            }
+            &:nth-of-type(2) {
+              animation-delay: 0.15s;
+              top: 12px;
+            }
+            &:nth-of-type(3) {
+              animation-delay: 0.3s;
+              top: 24px;
+            }
+          }
+        }
+        & .scroll_text {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+    &.section_profile {
+      & .section_inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        & .profile_sticky {
+          position: sticky;
+          top: 200px;
+          width: 420px;
+          & .section_heading {
+            display: inline-block;
+          }
+          & .profile_image {
+            position: relative;
+            width: 420px;
+            height: 420px;
+            &::after {
+              @include pos(absolute, 30px, null, null, 30px, -1);
+              display: inline-block;
+              width: 100%;
+              height: 100%;
+              border: 2px solid map-get($color-border, black-01);
+              box-sizing: border-box;
+              content: '';
+            }
+            & img {
+              width: 100%;
+            }
+          }
+        }
+        & .profile_info {
+          width: 50%;
+          & .profile_info_list {
+            & .profile_info_item {
+              & .profile_desc {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                & .profile_name {
+                  font-size: 30px;
+                  font-weight: 700;
+                  line-height: 50px;
+                  color: map-get($color-type, blue-01);
+                }
+                & .profile_main_intro {
+                  font-size: 20px;
+                  line-height: 30px;
+                  & .profile_main_intro_highlight {
+                    font-weight: 700;
+                  }
+                }
+                & .profile_sub_intro {
+                  font-size: 20px;
+                  line-height: 30px;
+                  color: map-get($color-type, grey-01);
+                }
+              }
+              & .profile_desc_link {
+                position: relative;
+                padding-right: 30px;
+                margin-top: 50px;
+                font-size: 20px;
+                line-height: 20px;
+                color: map-get($color-type, blue-01);
+                transition: 0.5s all ease;
+                &::after {
+                  @include pos(absolute, 0px, 0px, null, null, null);
+                  display: inline-block;
+                  width: 20px;
+                  height: 20px;
+                  background: url('../../../img/icon/icon_profile_desc.svg') no-repeat;
+                  content: '';
+                }
+                &:hover {
+                  opacity: 0.5;
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
         }
       }
     }
