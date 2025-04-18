@@ -1,5 +1,6 @@
 import { loadFile } from "./common/loadFile.js";
 import { particle } from "./lib/particle.js";
+import { typing } from "./pages/typing.js";
 
 let windowWidth = 0;
 
@@ -28,6 +29,7 @@ window.addEventListener('resize', function() {
 // DOM 로드 후 함수 실행
 document.addEventListener('DOMContentLoaded', function(){
   loadFile(function(){
-    // particle();
+    particle();
+    typing();
   })
 })
