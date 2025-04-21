@@ -1,6 +1,17 @@
 @media screen and (min-width: 1200px) {
   .section_heading {
     margin-bottom: 60px;
+    &:nth-of-type(1) {
+      & .section_heading_title::before {
+        @include pos(absolute, 50%, null, null, 0px, null);
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: url('../../../img/icon/icon_profile_heading.svg') no-repeat;
+        transform: translateY(-50%);
+        content: '';
+      }
+    }
     & .section_heading_title {
       display: inline-block;
       position: relative;

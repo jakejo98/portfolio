@@ -194,6 +194,9 @@
 
 @media screen and (min-width: 1200px) {
   .common_section {
+    &:not(:nth-of-type(1)) {
+      padding: 100px 0px;
+    }
     & .section_inner {
       @include inner('desktop');
     }
@@ -288,87 +291,7 @@
       }
     }
     &.section_profile {
-      & .section_inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        & .profile_sticky {
-          position: sticky;
-          top: 200px;
-          width: 420px;
-          & .section_heading {
-            display: inline-block;
-          }
-          & .profile_image {
-            position: relative;
-            width: 420px;
-            height: 420px;
-            &::after {
-              @include pos(absolute, 30px, null, null, 30px, -1);
-              display: inline-block;
-              width: 100%;
-              height: 100%;
-              border: 2px solid map-get($color-border, black-01);
-              box-sizing: border-box;
-              content: '';
-            }
-            & img {
-              width: 100%;
-            }
-          }
-        }
-        & .profile_info {
-          width: 50%;
-          & .profile_info_list {
-            & .profile_info_item {
-              & .profile_desc {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                & .profile_name {
-                  font-size: 30px;
-                  font-weight: 700;
-                  line-height: 50px;
-                  color: map-get($color-type, blue-01);
-                }
-                & .profile_main_intro {
-                  font-size: 20px;
-                  line-height: 30px;
-                  & .profile_main_intro_highlight {
-                    font-weight: 700;
-                  }
-                }
-                & .profile_sub_intro {
-                  font-size: 20px;
-                  line-height: 30px;
-                  color: map-get($color-type, grey-01);
-                }
-              }
-              & .profile_desc_link {
-                position: relative;
-                padding-right: 30px;
-                margin-top: 50px;
-                font-size: 20px;
-                line-height: 20px;
-                color: map-get($color-type, blue-01);
-                transition: 0.5s all ease;
-                &::after {
-                  @include pos(absolute, 0px, 0px, null, null, null);
-                  display: inline-block;
-                  width: 20px;
-                  height: 20px;
-                  background: url('../../../img/icon/icon_profile_desc.svg') no-repeat;
-                  content: '';
-                }
-                &:hover {
-                  opacity: 0.5;
-                  margin-left: 10px;
-                }
-              }
-            }
-          }
-        }
-      }
+
     }
   }
 }
