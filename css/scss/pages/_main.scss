@@ -1,5 +1,8 @@
 @media screen and (max-width: 767px) {
   .common_section {
+    & + .common_section {
+      padding: 60px 0px;
+    }
     & .section_inner {
       @include inner('responsive');
     }
@@ -92,11 +95,133 @@
         }
       }
     }
+    // profile 
+    &.section_profile {
+      background-color: map-get($color-bg, grey-01);
+      & .profile_wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        & .profile {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 40px;
+          & .profile_info {
+            & .profile_info_list {
+              & .profile_info_ko_name {
+                width: 170px;
+              }
+              & .profile_info_en_name {
+                font-size: 24px;
+                line-height: 36px;
+                text-align: center;
+              }
+              & .profile_info_birth {
+                font-size: 16px;
+                line-height: 24px;
+                color: map-get($color-type, grey-01);
+                text-align: center;
+              }
+            }
+          }
+          & .profile_img {
+            width: 50%;
+          }
+          & .profile_contact {
+            & .profile_contact_list {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 20px;
+              & .profile_contact_item {
+                &:nth-of-type(1) {
+                  & .profile_contact_link::before {
+                    background: url('../img/icon/icon_profile_call.svg') no-repeat;
+                  }
+                }
+                &:nth-of-type(2) {
+                  & .profile_contact_link::before {
+                    background: url('../img/icon/icon_profile_mail.svg') no-repeat;
+                  }
+                }
+                &:nth-of-type(3) {
+                  & .profile_contact_link::before {
+                    background: url('../img/icon/icon_profile_github.svg') no-repeat;
+                  }
+                }
+                & .profile_contact_link {
+                  position: relative;
+                  padding-left: 30px;
+                  font-size: 16px;
+                  line-height: 24px;
+                  color: map-get($color-type, grey-01);
+                  &::before {
+                    @include pos(absolute, 50%, null, null, 0px, null);
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    transform: translateY(-50%);
+                    content: '';
+                  }
+                }
+              }
+            }
+          }
+        }
+        & .career {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          & .career_info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            &:nth-of-type(1) {
+              & .career_info_title {
+                width: 91px;
+              }
+            }
+            &:nth-of-type(2) {
+              & .career_info_title {
+                width: 91px;
+              }
+            }
+            &:nth-of-type(3) {
+              & .career_info_title {
+                width: 68px;
+              }
+            }
+            & .career_info_list {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              & .career_info_item {
+                display: flex;
+                flex-direction: column;
+                & .career_info_date {
+                  font-size: 16px;
+                  line-height: 24px;
+                }
+                & .career_info_detail {
+                  font-size: 16px;
+                  line-height: 24px;
+                  color: map-get($color-type, grey-01);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .common_section {
+    & + .common_section {
+      padding: 80px 0px;
+    }
     & .section_inner {
       @include inner('responsive');
     }
@@ -189,12 +314,131 @@
         }
       }
     }
+    // profile
+    &.section_profile {
+      background-color: map-get($color-bg, grey-01);
+      & .profile_wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        & .profile {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 50px;
+          & .profile_info {
+            & .profile_info_list {
+              & .profile_info_ko_name {
+                width: 226px;
+              }
+              & .profile_info_en_name {
+                font-size: 26px;
+                line-height: 40px;
+                text-align: center;
+              }
+              & .profile_info_birth {
+                font-size: 18px;
+                line-height: 28px;
+                color: map-get($color-type, grey-01);
+                text-align: center;
+              }
+            }
+          }
+          & .profile_img {
+            width: 50%;
+          }
+          & .profile_contact {
+            & .profile_contact_list {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 20px;
+              & .profile_contact_item {
+                &:nth-of-type(1) {
+                  & .profile_contact_link::before {
+                    background: url('../img/icon/icon_profile_call.svg') no-repeat;
+                  }
+                }
+                &:nth-of-type(2) {
+                  & .profile_contact_link::before {
+                    background: url('../img/icon/icon_profile_mail.svg') no-repeat;
+                  }
+                }
+                &:nth-of-type(3) {
+                  & .profile_contact_link::before {
+                    background: url('../img/icon/icon_profile_github.svg') no-repeat;
+                  }
+                }
+                & .profile_contact_link {
+                  position: relative;
+                  padding-left: 30px;
+                  font-size: 18px;
+                  line-height: 28px;
+                  color: map-get($color-type, grey-01);
+                  &::before {
+                    @include pos(absolute, 50%, null, null, 0px, null);
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    transform: translateY(-50%);
+                    content: '';
+                  }
+                }
+              }
+            }
+          }
+        }
+        & .career {
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+          & .career_info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            &:nth-of-type(1) {
+              & .career_info_title {
+                width: 98px;
+              }
+            }
+            &:nth-of-type(2) {
+              & .career_info_title {
+                width: 98px;
+              }
+            }
+            &:nth-of-type(3) {
+              & .career_info_title {
+                width: 74px;
+              }
+            }
+            & .career_info_list {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              & .career_info_item {
+                display: flex;
+                justify-content: space-between;
+                & .career_info_date {
+                  font-size: 18px;
+                  line-height: 28px;
+                }
+                & .career_info_detail {
+                  font-size: 18px;
+                  line-height: 28px;
+                  color: map-get($color-type, grey-01);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 1200px) {
   .common_section {
-    &:not(:nth-of-type(1)) {
+    & + .common_section {
       padding: 100px 0px;
     }
     & .section_inner {
@@ -290,8 +534,160 @@
         }
       }
     }
+    // profile
     &.section_profile {
-
+      background-color: map-get($color-bg, grey-01);
+      & .profile_wrap {
+        display: flex;
+        justify-content: space-between;
+        & .profile {
+          display: flex;
+          flex-direction: column;
+          gap: 60px;
+          & .profile_info {
+            & .profile_info_list {
+              & .profile_info_ko_name {
+                width: 283px;
+              }
+              & .profile_info_en_name {
+                font-size: 30px;
+                line-height: 50px;
+              }
+              & .profile_info_birth {
+                font-size: 20px;
+                line-height: 30px;
+                color: map-get($color-type, grey-01);
+              }
+            }
+          }
+          & .profile_img {
+            width: 300px;
+          }
+          & .profile_contact {
+            & .profile_contact_list {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              & .profile_contact_item {
+                &:nth-of-type(1) {
+                  & .profile_contact_link::before {
+                    background: url('../img/icon/icon_profile_call.svg') no-repeat;
+                  }
+                }
+                &:nth-of-type(2) {
+                  & .profile_contact_link::before {
+                    background: url('../img/icon/icon_profile_mail.svg') no-repeat;
+                  }
+                }
+                &:nth-of-type(3) {
+                  & .profile_contact_link::before {
+                    background: url('../img/icon/icon_profile_github.svg') no-repeat;
+                  }
+                }
+                & .profile_contact_link {
+                  position: relative;
+                  padding-left: 30px;
+                  font-size: 20px;
+                  line-height: 30px;
+                  color: map-get($color-type, grey-01);
+                  &::before {
+                    @include pos(absolute, 50%, null, null, 0px, null);
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    transform: translateY(-50%);
+                    content: '';
+                  }
+                }
+              }
+            }
+          }
+        }
+        & .career {
+          display: flex;
+          flex-direction: column;
+          gap: 60px;
+          width: 50%;
+          & .career_info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            &:nth-of-type(1) {
+              & .career_info_title {
+                width: 114px;
+              }
+            }
+            &:nth-of-type(2) {
+              & .career_info_title {
+                width: 113px;
+              }
+            }
+            &:nth-of-type(3) {
+              & .career_info_title {
+                width: 85px;
+              }
+            }
+            & .career_info_list {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              & .career_info_item {
+                display: flex;
+                justify-content: space-between;
+                & .career_info_date {
+                  font-size: 20px;
+                  line-height: 30px;
+                }
+                & .career_info_detail {
+                  font-size: 20px;
+                  line-height: 30px;
+                  color: map-get($color-type, grey-01);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // tech stack
+    &.section_tech_stack {
+      & .tech_stack_wrap {
+        & .tech-stack-swiper {
+          padding: 0px 10px 10px 0px;
+          margin-right: -10px;
+          & .swiper-wrapper {
+            & .swiper-slide {
+              & .flip_card {
+                width: 100%;
+                height: 200px;
+                border-radius: 12px;
+                background-color: map-get($color-bg, white-01);
+                box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+                &:hover {
+                  transform: rotateY(90deg);
+                }
+                & .flip_card_front {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 12px;
+                  width: 100%;
+                  height: 100%;
+                  & img {
+                    width: 100px;
+                  }
+                  & .tech_stack_title {
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 24px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

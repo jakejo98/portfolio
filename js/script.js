@@ -1,5 +1,7 @@
 import { loadFile } from "./common/loadFile.js";
 import { particle } from "./lib/particle.js";
+import { initAos } from "./lib/aos.js";
+import { initSwiper } from "./lib/swiper.js";
 import { typing } from "./pages/typing.js";
 
 let windowWidth = 0;
@@ -30,6 +32,8 @@ window.addEventListener('resize', function() {
 document.addEventListener('DOMContentLoaded', function(){
   loadFile(function(){
     particle();
+    initAos();
+    initSwiper();
     typing();
   })
 })
