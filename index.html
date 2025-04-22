@@ -20,12 +20,14 @@
   <!-- 링크 및 스타일시트 -->
   <link rel="shortcut icon" href="/ecoproduce/img/favicon/favicon.ico">
   <link rel="canonical" href="https://yheun03.github.io/portfolio/">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/portfolio.css">
   <!-- CDN -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <!-- JS -->
   <script type="module" src="./js/script.js"></script>
 </head>
@@ -35,7 +37,7 @@
     <main id="main" class="common_container page_main">
       <section class="common_section section_main">
         <div id="main_visual_particle" class="main_visual_particle" aria-hidden="true"></div>
-        <div class="main_visual_wrap" role="region" aria-labelledby="main_visual_title">
+        <div class="main_visual_wrap">
           <div class="main_visual"></div>
           <div class="main_visual_title_wrap">
             <p class="main_visual_title"></p>
@@ -50,26 +52,138 @@
           <span class="scroll_text">Keep Scrolling</span>
         </div>
       </section>
-      <section class="common_section section_profile">
+      <section class="common_section section_profile" data-aos="fade-up">
         <div class="section_inner">
           <div class="section_heading">
             <h2 class="section_heading_title">Profile</h2>
           </div>
           <div class="profile_wrap">
-            <div class="profile_info">
-              
+            <div class="profile">
+              <div class="profile_info">
+                <dl class="profile_info_list">
+                  <dt class="blind">한글이름</dt>
+                  <dd class="profile_info_ko_name">
+                    <img src="./img/profile/profile_ko_name.svg" alt="조재형 한글 이름">
+                  </dd>
+                  <dt class="blind">영어이름</dt>
+                  <dd class="profile_info_en_name">Jo JaeHyung</dd>
+                  <dt class="blind">생년월일</dt>
+                  <dd class="profile_info_birth">1998. 02. 23</dd>
+                </dl>
+              </div>
               <div class="profile_img">
-                <img src="" alt="">
+                <img src="./img/profile/profile.svg" alt="조재형 프로필 이미지">
               </div>
               <div class="profile_contact">
-
+                <ul class="profile_contact_list">
+                  <li class="profile_contact_item">
+                    <a href="tel:010-8079-0310" class="profile_contact_link">010-8079-0310</a>
+                  </li>
+                  <li class="profile_contact_item">
+                    <a href="mailto:jakejo@kakao.com" class="profile_contact_link">jakejo@kakao.com</a>
+                  </li>
+                  <li class="profile_contact_item">
+                    <a href="https://github.com/jakejo98" class="profile_contact_link">jakejo98</a>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="profile_career"></div>
+            <div class="career">
+              <article class="career_info">
+                <h3 class="career_info_title">
+                  <img src="./img/profile/career_info_edu.svg" alt="학력사항">
+                </h3>
+                <ul class="career_info_list">
+                  <li class="career_info_item">
+                    <strong class="career_info_date">2024.02 -</strong>
+                    <span class="career_info_detail">한국방송통신대학교 컴퓨터과학과 재학</span>
+                  </li>
+                  <li class="career_info_item">
+                    <strong class="career_info_date">2022.09 - 2023.03</strong>
+                    <span class="career_info_detail">하이미디어컴퓨터학원 수료</span>
+                  </li>
+                  <li class="career_info_item">
+                    <strong class="career_info_date">2014.03 - 2017.02</strong>
+                    <span class="career_info_detail">한세사이버보안고등학교 해킹보안과 졸업</span>
+                  </li>
+                </ul>
+              </article>
+              <article class="career_info">
+                <h3 class="career_info_title">
+                  <img src="./img/profile/career_info_exp.svg" alt="경력사항">
+                </h3>
+                <ul class="career_info_list">
+                  <li class="career_info_item">
+                    <strong class="career_info_date">2023.04 - 2025.04</strong>
+                    <span class="career_info_detail">(주)푸시컴즈 UI/UX개발팀 퍼블리셔</span>
+                  </li>
+                  <li class="career_info_item">
+                    <strong class="career_info_date">2024.10 - 2025.03</strong>
+                    <span class="career_info_detail">(주)춘호 퍼블리셔(프리랜서)</span>
+                  </li>
+                </ul>
+              </article>
+              <article class="career_info">
+                <h3 class="career_info_title">
+                  <img src="./img/profile/career_info_license.svg" alt="자격증">
+                </h3>
+                <ul class="career_info_list">
+                  <li class="career_info_item">
+                    <strong class="career_info_date">2016.09</strong>
+                    <span class="career_info_detail">정보기기운용기능사</span>
+                  </li>
+                  <li class="career_info_item">
+                    <strong class="career_info_date">2016.04</strong>
+                    <span class="career_info_detail">정보처리기능사</span>
+                  </li>
+                  <li class="career_info_item">
+                    <strong class="career_info_date">2015.03</strong>
+                    <span class="career_info_detail">네트워크관리사 2급</span>
+                  </li>
+                  <li class="career_info_item">
+                    <strong class="career_info_date">2015.02</strong>
+                    <span class="career_info_detail">IEQ(인터넷윤리자격) 2급</span>
+                  </li>
+                  <li class="career_info_item">
+                    <strong class="career_info_date">2014.11</strong>
+                    <span class="career_info_detail">리눅스마스터 2급</span>
+                  </li>
+                  <li class="career_info_item">
+                    <strong class="career_info_date">2014.10</strong>
+                    <span class="career_info_detail">정보기술자격(ITQ) 한글파워포인트(한쇼) A등급</span>
+                  </li>
+                  <li class="career_info_item">
+                    <strong class="career_info_date">2014.11</strong>
+                    <span class="career_info_detail">정보기술자격(ITQ) 아래한글 A등급</span>
+                  </li>
+                </ul>
+              </article>
+            </div>
           </div>
         </div>
       </section>
-      <section class="common_section section_tech_stack"></section>
+      <section class="common_section section_tech_stack">
+        <div class="section_inner">
+          <div class="section_heading">
+            <h2 class="section_heading_title">Tech Stack</h2>
+          </div>
+          <div class="tech_stack_wrap">
+            <div class="swiper tech-stack-swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="flip_card">
+                    <div class="flip_card_front">
+                      <img src="./img/tech_stack/tech_stack_html5.svg" alt="html5">
+                      <strong class="tech_stack_title">HTML5</strong>
+                    </div>
+                    <div class="flip_card_back"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="common_section section_work"></section>
       <section class="common_section section_contact"></section>
     </main>
